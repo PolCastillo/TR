@@ -35,16 +35,16 @@ function playSound() {
 function switchCycle() {
     if (isWorkPeriod) {
         currentTime = shortBreak;
-        statusDisplay.textContent = 'Descanso Corto';
+        statusDisplay.textContent = 'Descans Curt';
     } else {
         cycleCount++;
         if (cycleCount >= cycles) {
             currentTime = longBreak;
-            statusDisplay.textContent = 'Descanso Largo';
+            statusDisplay.textContent = 'Descans Llarg';
             cycleCount = 0; // Reset cycle count after a long break
         } else {
             currentTime = workTime;
-            statusDisplay.textContent = 'Trabajando';
+            statusDisplay.textContent = 'Treballant';
         }
     }
     isWorkPeriod = !isWorkPeriod; // Toggle between work and break periods
@@ -77,7 +77,7 @@ function resetTimer() {
     currentTime = workTime;
     cycleCount = 0;
     isWorkPeriod = true;
-    statusDisplay.textContent = 'Trabajando';
+    statusDisplay.textContent = 'Treballant';
     updateTimer();
 }
 
